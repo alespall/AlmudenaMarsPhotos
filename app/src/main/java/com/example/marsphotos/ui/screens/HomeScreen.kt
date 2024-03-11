@@ -151,7 +151,7 @@ fun LoadingScreenPreview() {
 @Composable
 fun ErrorScreenPreview() {
     MarsPhotosTheme {
-        ErrorScreen()
+        ErrorScreen({})
     }
 }
 @Preview(showBackground = true)
