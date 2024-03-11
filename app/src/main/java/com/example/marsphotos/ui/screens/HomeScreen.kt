@@ -36,7 +36,7 @@ import com.example.marsphotos.R
 import com.example.marsphotos.ui.theme.MarsPhotosTheme
 @Composable
 fun HomeScreen(
-    marsUiState: String,
+    marsUiState: MarsUiState,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
@@ -83,7 +83,21 @@ fun ResultScreen(photos: String, modifier: Modifier = Modifier) {
         Text(text = photos)
     }
 }
+@Preview(showBackground = true)
+@Composable
+fun LoadingScreenPreview() {
+    MarsPhotosTheme {
+        LoadingScreen()
+    }
+}
 
+@Preview(showBackground = true)
+@Composable
+fun ErrorScreenPreview() {
+    MarsPhotosTheme {
+        ErrorScreen()
+    }
+}
 @Preview(showBackground = true)
 @Composable
 fun ResultScreenPreview() {
